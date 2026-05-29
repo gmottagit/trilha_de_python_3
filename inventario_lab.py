@@ -1,6 +1,7 @@
 def numero_reagentes(reagentes):
     reagentesSet = set(reagentes)
-    return len(reagentesSet)
+    print(reagentesSet)
+    print(len(reagentesSet))
 
 
 # Dados do inventário físico (cada índice representa um frasco individual)
@@ -21,11 +22,22 @@ purezas = [99.5, 92.0, 99.5, 98.0, 99.9, 98.5, 96.0, 99.0, 99.0, 98.8, 99.5, 92.
 96.0, 99.9, 98.0, 99.0, 95.0, 99.5, 92.0, 98.8, 99.0, 99.9, 99.5, 92.0, 99.0, 98.0, 98.5,
 95.0, 96.0]
 
+################################
+# MAIN #
+###############################
+#1
+numero_reagentes(reagentes)
+print("\n")
+
+#2
 listaZip = zip(reagentes, lotes, purezas)
 listaOrdenada = list(listaZip)
 
+#3
 for tuplas in listaOrdenada:
      print(f"Frasco do Lote: {tuplas[1]} | Reagente: {tuplas[0]} | Pureza: {tuplas[2]}%")
 
-listaPureza = [purezas[1] for purezas in listaOrdenada if purezas[2] >= 98.0]
-print(listaPureza)
+#4
+lotesPuros = [purezas[1] for purezas in listaOrdenada if purezas[2] >= 98.0]
+print("\n")
+print(lotesPuros)
