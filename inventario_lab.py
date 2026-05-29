@@ -23,10 +23,9 @@ purezas = [99.5, 92.0, 99.5, 98.0, 99.9, 98.5, 96.0, 99.0, 99.0, 98.8, 99.5, 92.
 
 listaZip = zip(reagentes, lotes, purezas)
 listaOrdenada = list(listaZip)
-print(listaOrdenada)
-
 
 for tuplas in listaOrdenada:
-    for reagentes in tuplas:
-        print(f"Frasco do Lote: {tuplas[1]} | Reagente: {tuplas[0]} | Pureza: {tuplas[2]}%")
+     print(f"Frasco do Lote: {tuplas[1]} | Reagente: {tuplas[0]} | Pureza: {tuplas[2]}%")
 
+listaPureza = [purezas[1] for purezas in listaOrdenada if purezas[2] >= 98.0]
+print(listaPureza)
