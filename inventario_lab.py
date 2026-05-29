@@ -25,3 +25,8 @@ listaZip = zip(reagentes, lotes, purezas)
 listaOrdenada = list(listaZip)
 print(listaOrdenada)
 
+
+for tuplas in listaOrdenada:
+    for reagentes in tuplas:
+        print(f"Frasco do Lote: {tuplas[1]} | Reagente: {tuplas[0]} | Pureza: {tuplas[2]}%")
+
