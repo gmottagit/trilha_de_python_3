@@ -25,12 +25,15 @@ seria incorreto usar a função dict() para transformar o resultado do
 nosso zip() em um dicionário, utilizando o nome do reagente como
 "Chave" e o lote como "Valor"?
 
+Seria incorreto porque existem vários frascos do mesmo reagente no inventário. Em um dicionário, as chaves devem ser únicas para que um dicionário possa funcionar como o esperado.
 
 ● O que a função zip() gera na memória do Python antes de usarmos a
 função list() para forçar a visualização dos dados?
 
+A função zip() gera um objeto iteravel do tipo zip. Esse objeto não armazena imediatamente todos os dados na memória, mas produz os elementos sob demanda conforme são percorridos.
 
 ● Observando o seu código final, de que forma o List Comprehension
 substitui a necessidade de criar uma lista vazia e usar a estrutura de
 repetição for tradicional acompanhada do método .append()?
 
+O List Comprehension permite criar e preencher uma lista em uma única linha de código. Em vez de ter que criar uma lista vazia, percorrer os elementos com for, verificar uma condição e usar .append() para adicionar os valores um de cada vez, o List Comprehension permite fazer tudo isso de maneira integrada.
