@@ -1,3 +1,4 @@
+
 def numero_reagentes(reagentes):
     reagentesSet = set(reagentes)
     print(reagentesSet)
@@ -30,6 +31,7 @@ numero_reagentes(reagentes)
 print("\n")
 
 #2
+#Junta os dados das tres listas e cria um zip
 listaZip = zip(reagentes, lotes, purezas)
 listaOrdenada = list(listaZip)
 
@@ -38,6 +40,7 @@ for tuplas in listaOrdenada:
      print(f"Frasco do Lote: {tuplas[1]} | Reagente: {tuplas[0]} | Pureza: {tuplas[2]}%")
 
 #4
+#percorre verificando se atende as condições.
 lotesPuros = [purezas[1] for purezas in listaOrdenada if purezas[2] >= 98.0]
 print("\n")
 print(lotesPuros)
